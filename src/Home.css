@@ -16,6 +16,26 @@ body {
   border: none;
 }
 
+#profile {
+  position: fixed;
+  bottom: 14rem;
+  right: 2rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: none;
+}
+
+#profile img {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 2rem;
+  bottom: 14rem;
+}
+
 .upload-btn {
   position: fixed;
   bottom: 4rem;
@@ -147,8 +167,8 @@ img {
   margin-top: -1rem;
 }
 
-.image-container{
+.image-container {
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }

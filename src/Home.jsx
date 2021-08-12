@@ -4,6 +4,7 @@ import { AuthContext } from "./AuthProvider";
 import { useContext, useState, useEffect } from "react";
 import VideoCard from "./VideoCard";
 import "./Home.css";
+import {Link} from "react-router-dom"; 
 
 let Home = (props) => {
   let value = useContext(AuthContext);
@@ -17,9 +18,10 @@ let Home = (props) => {
         // Onsnapshot makes our database realTime
 
         setPosts(
-          querySnapshot.docs.map((doc) => { // .doc gives us all the references of the documents.
+          querySnapshot.docs.map((doc) => {
+            // .doc gives us all the references of the documents.
             console.log(doc.data()); // This gives all the data of the posts collection.
-            return {...doc.data(), id:doc.id};
+            return { ...doc.data(), id: doc.id };
           })
         );
       });
@@ -34,8 +36,8 @@ let Home = (props) => {
       {value ? (
         <>
           <div className="posts-container">
-            {posts.map((post, i)=>{
-              return <VideoCard key={i} posts={post} />
+            {posts.map((post, i) => {
+              return <VideoCard key={i} posts={post} />;
             })}
           </div>
           <button
@@ -46,10 +48,13 @@ let Home = (props) => {
           >
             Log out
           </button>
+          <Link to="/profile">
+            <button id="profile"><img src={value.photoURL}/></button>
+          </Link>
 
           <input
             onClick={(e) => {
-              e.target.value = null; 
+              e.target.value = null;
             }}
             onChange={(e) => {
               if (!e.target.files[0]) return;

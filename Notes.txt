@@ -58,3 +58,11 @@ useEffect(()=>{ ==> This works like Component Did Mount
 If you have created a subscription ( Talking realtime with the database like onSnapshot, onAuthStateChanged ) on a component and if you unmount the same component, so we should
 unsubscribe before unmounting the component.
 
+
+
+
+===> Posts sari dikhengi chahe wo kisi bho user ne post ki hon. Comments bhi sare user ke dikhenge ek post pe. 
+
+    Jo user Signed in hoga, wo apni profile mai dekh payega ki usne kitni posts ki hain.
+
+    So 2 users chahiyein kam se kam tereko testing ke liye.

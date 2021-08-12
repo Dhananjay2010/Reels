@@ -1,0 +1,19 @@
+
+.image-profile {
+    display: block;
+    margin: auto;
+    height: 15rem;
+    width: 15rem;
+  }
+  
+  
+  .username-profile{
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 100;
+  }
+  
+  .ttpost{
+      text-align: center;
+      font-size: 2rem;
+  }
