@@ -56,7 +56,7 @@ useEffect(()=>{ ==> This works like Component Did Mount
 <=========================== Subscription ====================================>
 
 If you have created a subscription ( Talking realtime with the database like onSnapshot, onAuthStateChanged ) on a component and if you unmount the same component, so we should
-unsubscribe before unmounting the component.
+unsubscribe before unmounting the component. Otherwise React says that there can be probably a memory leak.
 
 
 
