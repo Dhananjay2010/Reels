@@ -1,0 +1,60 @@
+Mounting and Unmounting ==> Agar koi component is screen pe appear ho raha hai use
+                            bolte hain mounting.
+
+                            Whereas agar koi component screen se remove hota hai, use bolte hain unmounting.
+
+
+<================================ UseEffect { cleanUp } ==================================>
+
+    UseEffect(()=>{ ==> This works like component will unmount
+        console.log("1");
+
+        return ()=>{      // ==> This is called the cleanUp function.
+            console.log("2");
+        }
+    },[])
+
+
+    So whenever a function inside useEffect returns a function, it is called the cleanUp function.
+    This function works before the component is going to be unmounted.
+
+
+Important Note :-  So this works like Component will Unmount. 
+
+
+useEffect(()=>{ ==> This works like Component Did Mount
+    console.log("1");
+}, []);
+
+
+<------------------------------- 2nd case ------------------------------------------------>
+
+ ==>   Now if there is no dependency array,
+
+    useEffect(()=>{
+        console.log("1");
+
+        return ()==>{
+            console.log("2");
+        }
+    })
+
+    So this works after every re-render since there is no dependency array.
+    So cleanUp function will be called everytime before the re-render.
+
+    So the output will be
+        1  ==> For the first render
+        2  ==> Just before the 2nd render, the cleanUp function will be called.
+        1  ==> This will be of the 2nd render and the cycle will go on.
+        2
+        1
+        .
+        .
+        .
+        .
+
+<=========================== Subscription ====================================>
+
+If you have created a subscription ( Talking realtime with the database like onSnapshot, onAuthStateChanged ) on a component and if you unmount the same component, so we should
+unsubscribe before unmounting the component.
+

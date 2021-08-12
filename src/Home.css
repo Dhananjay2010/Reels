@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.logout-btn {
+  position: fixed;
+  bottom: 8rem;
+  right: 2rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.upload-btn {
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  height: 2rem;
+  width: 6rem;
+  /* border-radius: 50%; */
+  border: none;
+}
+
+.posts-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory; /* To make the scroll snap */
+}
+
+.video-card {
+  color: white;
+  /* border: 1px solid; */
+  height: 100%;
+  width: 30rem;
+  margin: auto;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.like {
+  font-size: 40px;
+  color: #d63031;
+  position: absolute;
+  bottom: 20vh;
+  right: 10px;
+}
+
+.comment {
+  font-size: 40px;
+  position: absolute;
+  bottom: 14vh;
+  right: 10px;
+}
+
+.username {
+  position: absolute;
+  bottom: 20vh;
+  left: 20px;
+}
+
+.song {
+  position: absolute;
+  left: 20px;
+  bottom: 16vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.comment-box {
+  height: 40%;
+  width: 100%;
+  background: white;
+  position: absolute;
+  bottom: 0;
+}
+
+.comment-box-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  color: blue;
+  height: 10%;
+}
+
+.all-comments {
+  height: 75%;
+  width: 100%;
+  position: absolute;
+  top: 4vh;
+  border: 1px solid black;
+  color: black;
+  overflow: auto;
+}
+
+.comment-form {
+  width: 100%;
+  height: 6vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.comment-form input {
+  height: 100%;
+  width: 80%;
+  border: none;
+}
+
+.comment-form button {
+  height: 100%;
+  width: 20%;
+  color: blue;
+  border: none;
+  font-size: 16px;
+}
+
+img {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.all-comments > div {
+  display: flex;
+  padding: 4px;
+}
+
+.all-comments > div > div {
+  margin-left: 10px;
+}
+
+.inner-comment {
+  margin-top: -1rem;
+}
+
+.image-container{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
