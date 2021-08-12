@@ -66,3 +66,5 @@ unsubscribe before unmounting the component.
     Jo user Signed in hoga, wo apni profile mai dekh payega ki usne kitni posts ki hain.
 
     So 2 users chahiyein kam se kam tereko testing ke liye.
+
+    Tab Ek user ki sari posts uske profile mai dikha.
